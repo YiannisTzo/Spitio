@@ -1,0 +1,16 @@
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\bin\Debug\net10.0\MedicalVault.Application.deps.json
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\bin\Debug\net10.0\MedicalVault.Application.dll
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\bin\Debug\net10.0\MedicalVault.Application.pdb
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\bin\Debug\net10.0\MedicalVault.Domain.dll
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\bin\Debug\net10.0\MedicalVault.Domain.pdb
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\MedicalVault.Application.csproj.AssemblyReference.cache
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\MedicalVault.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\MedicalVault.Application.AssemblyInfoInputs.cache
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\MedicalVault.Application.AssemblyInfo.cs
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\MedicalVault.Application.csproj.CoreCompileInputs.cache
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\MedicalVault.Application.sourcelink.json
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\MedicalV.BCA112A7.Up2Date
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\MedicalVault.Application.dll
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\refint\MedicalVault.Application.dll
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\MedicalVault.Application.pdb
+C:\Users\itzomiadis.UKL5CG2089C9G\Desktop\MedicalProject\MedicalVault\src\MedicalVault.Application\obj\Debug\net10.0\ref\MedicalVault.Application.dll
