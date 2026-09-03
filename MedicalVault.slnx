@@ -6,6 +6,7 @@
     <Project Path="src/MedicalVault.Infrastructure/MedicalVault.Infrastructure.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/MedicalVault.IntegrationTests/MedicalVault.IntegrationTests.csproj" />
     <Project Path="tests/MedicalVault.UnitTests/MedicalVault.UnitTests.csproj" />
   </Folder>
 </Solution>
