@@ -1,4 +1,4 @@
-﻿namespace MedicalVault.IntegrationTests;
+﻿namespace Spitio.IntegrationTests;
 
 public class UnitTest1
 {
