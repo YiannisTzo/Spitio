@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MedicalVault.Api\MedicalVault.Api.csproj" />
+    <ProjectReference Include="..\..\src\Spitio.Api\Spitio.Api.csproj" />
   </ItemGroup>
 
 </Project>
