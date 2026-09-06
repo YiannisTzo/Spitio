@@ -1,0 +1,52 @@
+name: Validate Branch Flow
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
+
+jobs:
+  validate-branch-flow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate source and target branches
+        shell: bash
+        run: |
+          SOURCE="${{ github.head_ref }}"
+          TARGET="${{ github.base_ref }}"
+
+          echo "Source branch: $SOURCE"
+          echo "Target branch: $TARGET"
+
+          if [[ "$SOURCE" == feature/* && "$TARGET" == "dev" ]]; then
+            echo "Valid flow: feature/* -> dev"
+            exit 0
+          fi
+
+          if [[ "$SOURCE" == bugfix/* && "$TARGET" == "dev" ]]; then
+            echo "Valid flow: bugfix/* -> dev"
+            exit 0
+          fi
+
+          if [[ "$SOURCE" == "dev" && "$TARGET" == "uat" ]]; then
+            echo "Valid flow: dev -> uat"
+            exit 0
+          fi
+
+          if [[ "$SOURCE" == "uat" && "$TARGET" == "prod" ]]; then
+            echo "Valid flow: uat -> prod"
+            exit 0
+          fi
+
+          if [[ "$SOURCE" == "uat" && "$TARGET" == "dr" ]]; then
+            echo "Valid flow: uat -> dr"
+            exit 0
+          fi
+
+          echo "Invalid branch promotion:"
+          echo "  $SOURCE -> $TARGET"
+          exit 1
