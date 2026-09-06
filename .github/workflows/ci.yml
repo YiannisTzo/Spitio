@@ -1,4 +1,4 @@
-name: MedicalVault CI
+name: Spitio CI
 
 on:
   pull_request:

@@ -1,12 +1,8 @@
 <Solution>
-  <Folder Name="/src/">
-    <Project Path="src/MedicalVault.Api/MedicalVault.Api.csproj" />
-    <Project Path="src/MedicalVault.Application/MedicalVault.Application.csproj" />
-    <Project Path="src/MedicalVault.Domain/MedicalVault.Domain.csproj" />
-    <Project Path="src/MedicalVault.Infrastructure/MedicalVault.Infrastructure.csproj" />
-  </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/MedicalVault.IntegrationTests/MedicalVault.IntegrationTests.csproj" />
-    <Project Path="tests/MedicalVault.UnitTests/MedicalVault.UnitTests.csproj" />
-  </Folder>
+  <Project Path="src/Spitio.Api/Spitio.Api.csproj" />
+  <Project Path="src/Spitio.Application/Spitio.Application.csproj" />
+  <Project Path="src/Spitio.Domain/Spitio.Domain.csproj" />
+  <Project Path="src/Spitio.Infrastructure/Spitio.Infrastructure.csproj" />
+  <Project Path="tests/Spitio.IntegrationTests/Spitio.IntegrationTests.csproj" />
+  <Project Path="tests/Spitio.UnitTests/Spitio.UnitTests.csproj" />
 </Solution>

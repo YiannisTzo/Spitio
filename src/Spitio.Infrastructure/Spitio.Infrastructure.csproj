@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\MedicalVault.Application\MedicalVault.Application.csproj" />
-    <ProjectReference Include="..\MedicalVault.Domain\MedicalVault.Domain.csproj" />
+    <ProjectReference Include="..\Spitio.Application\Spitio.Application.csproj" />
+    <ProjectReference Include="..\Spitio.Domain\Spitio.Domain.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
