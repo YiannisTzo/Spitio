@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MedicalVault.Application\MedicalVault.Application.csproj" />
-    <ProjectReference Include="..\MedicalVault.Infrastructure\MedicalVault.Infrastructure.csproj" />
+    <ProjectReference Include="..\Spitio.Application\Spitio.Application.csproj" />
+    <ProjectReference Include="..\Spitio.Infrastructure\Spitio.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

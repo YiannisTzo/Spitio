@@ -1,4 +1,4 @@
-﻿namespace MedicalVault.Infrastructure;
+﻿namespace Spitio.Infrastructure;
 
 public class Class1
 {
