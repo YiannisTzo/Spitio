@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\MedicalVault.Domain\MedicalVault.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Spitio.Domain\Spitio.Domain.csproj" />
   </ItemGroup>
 
 </Project>
