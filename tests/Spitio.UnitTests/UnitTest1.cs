@@ -32,6 +32,54 @@ public class CleaningRequestTests
     }
 
     [Fact]
+    public void CleaningRequest_ShouldRejectEmptyCustomerId()
+    {
+        Assert.Throws<ArgumentException>(() =>
+            new CleaningRequest(
+                Guid.NewGuid(),
+                Guid.Empty,
+                Guid.NewGuid(),
+                Guid.NewGuid(),
+                "Deep cleaning"));
+    }
+
+    [Fact]
+    public void CleaningRequest_ShouldRejectEmptyPropertyId()
+    {
+        Assert.Throws<ArgumentException>(() =>
+            new CleaningRequest(
+                Guid.NewGuid(),
+                Guid.NewGuid(),
+                Guid.Empty,
+                Guid.NewGuid(),
+                "Deep cleaning"));
+    }
+
+    [Fact]
+    public void CleaningRequest_ShouldRejectEmptyServiceTypeId()
+    {
+        Assert.Throws<ArgumentException>(() =>
+            new CleaningRequest(
+                Guid.NewGuid(),
+                Guid.NewGuid(),
+                Guid.NewGuid(),
+                Guid.Empty,
+                "Deep cleaning"));
+    }
+
+    [Fact]
+    public void CleaningRequest_ShouldRejectEmptyDescription()
+    {
+        Assert.Throws<ArgumentException>(() =>
+            new CleaningRequest(
+                Guid.NewGuid(),
+                Guid.NewGuid(),
+                Guid.NewGuid(),
+                Guid.NewGuid(),
+                ""));
+    }
+
+    [Fact]
     public void Confirm_ShouldChangeStatusToConfirmed()
     {
         var request = CreateRequest();
@@ -95,7 +143,6 @@ public class CleaningRequestTests
             () => request.Cancel());
     }
 
-    
     private static CleaningRequest CreateRequest()
     {
         return new CleaningRequest(
