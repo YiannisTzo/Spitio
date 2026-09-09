@@ -10,6 +10,13 @@ public class ServiceType
         Guid id,
         string name)
     {
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            throw new ArgumentException(
+                "Service type name cannot be empty.",
+                nameof(name));
+        }
+
         Id = id;
         Name = name;
     }
