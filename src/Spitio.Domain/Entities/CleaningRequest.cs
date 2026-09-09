@@ -21,12 +21,26 @@ public class CleaningRequest
         Guid serviceTypeId,
         string description)
     {
+        if (id == Guid.Empty)
+            throw new ArgumentException("Cleaning request Id is required.");
+
+        if (customerId == Guid.Empty)
+            throw new ArgumentException("CustomerId is required.");
+
+        if (propertyId == Guid.Empty)
+            throw new ArgumentException("PropertyId is required.");
+
+        if (serviceTypeId == Guid.Empty)
+            throw new ArgumentException("ServiceTypeId is required.");
+
+        if (string.IsNullOrWhiteSpace(description))
+            throw new ArgumentException("Cleaning request description is required.");
+
         Id = id;
         CustomerId = customerId;
         PropertyId = propertyId;
         ServiceTypeId = serviceTypeId;
         Description = description;
-
         Status = CleaningRequestStatus.Pending;
     }
 
@@ -34,7 +48,7 @@ public class CleaningRequest
     {
         if (Status != CleaningRequestStatus.Pending)
             throw new InvalidOperationException(
-                "Only pending cleaning requests can be confirmed.");
+                "Only pending requests can be confirmed.");
 
         Status = CleaningRequestStatus.Confirmed;
     }
@@ -43,7 +57,7 @@ public class CleaningRequest
     {
         if (Status != CleaningRequestStatus.Confirmed)
             throw new InvalidOperationException(
-                "Only confirmed cleaning requests can be started.");
+                "Only confirmed requests can be started.");
 
         Status = CleaningRequestStatus.InProgress;
     }
@@ -52,7 +66,7 @@ public class CleaningRequest
     {
         if (Status != CleaningRequestStatus.InProgress)
             throw new InvalidOperationException(
-                "Only in-progress cleaning requests can be completed.");
+                "Only requests in progress can be completed.");
 
         Status = CleaningRequestStatus.Completed;
     }
@@ -61,11 +75,11 @@ public class CleaningRequest
     {
         if (Status == CleaningRequestStatus.Completed)
             throw new InvalidOperationException(
-                "Completed cleaning requests cannot be cancelled.");
+                "Completed requests cannot be cancelled.");
 
         if (Status == CleaningRequestStatus.Cancelled)
             throw new InvalidOperationException(
-                "Cleaning request is already cancelled.");
+                "Request is already cancelled.");
 
         Status = CleaningRequestStatus.Cancelled;
     }
