@@ -19,4 +19,4 @@ role_assignments = {
 
 log_analytics_name           = "law-spitio-dev"
 log_analytics_sku            = "PerGB2018"
-log_analytics_retention_days = 7
+log_analytics_retention_days = 30
