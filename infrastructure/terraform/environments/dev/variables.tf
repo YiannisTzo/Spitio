@@ -1,8 +1,3 @@
-variable "name" {
-  description = "Name of the resource group."
-  type        = string
-}
-
 variable "location" {
   description = "Azure region for the environment."
   type        = string
@@ -18,6 +13,17 @@ variable "tags" {
   type        = map(string)
 }
 
+variable "role_assignments" {
+  description = "Role assignments for the resource group."
+
+  type = map(object({
+    role_definition_name = string
+    principal_id         = string
+    principal_type       = string
+  }))
+
+  default = {}
+}
 #Log Analytics
 variable "log_analytics_name" {
   description = "Name of the Log Analytics workspace."
