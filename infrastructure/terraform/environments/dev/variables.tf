@@ -39,3 +39,15 @@ variable "log_analytics_retention_days" {
   description = "Number of days to retain Log Analytics data."
   type        = number
 }
+
+#Container Registry
+variable "container_registry_name" {
+  description = "Name of the Azure Container Registry."
+  type        = string
+}
+
+variable "container_registry_sku" {
+  description = "SKU for the Azure Container Registry."
+  type        = string
+  default     = "Basic"
+}
