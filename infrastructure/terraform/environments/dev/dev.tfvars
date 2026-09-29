@@ -20,3 +20,8 @@ role_assignments = {
 log_analytics_name           = "law-spitio-dev"
 log_analytics_sku            = "PerGB2018"
 log_analytics_retention_days = 30
+
+# Container Registry
+
+container_registry_name = "acrspitiodev"
+container_registry_sku  = "Basic"

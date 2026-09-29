@@ -26,3 +26,15 @@ module "log_analytics" {
   retention_in_days   = var.log_analytics_retention_days
   tags                = var.tags
 }
+
+# Container Registry
+
+module "container_registry" {
+  source = "../../modules/container-registry"
+
+  name                = var.container_registry_name
+  location            = var.location
+  resource_group_name = module.resource_group.name
+  sku                 = var.container_registry_sku
+  tags                = var.tags
+}
