@@ -1,10 +1,6 @@
-name: Terraform DEV
+name: Terraform DEV Destroy
 
 on:
-  push:
-    branches:
-      - dev
-
   workflow_dispatch:
 
 permissions:
@@ -32,7 +28,7 @@ env:
 jobs:
 
   plan:
-    name: Terraform Plan
+    name: Terraform Destroy Plan
     runs-on: ubuntu-latest
 
     steps:
@@ -72,22 +68,22 @@ jobs:
         working-directory: ${{ env.TF_WORKING_DIRECTORY }}
         run: terraform validate
 
-      - name: Terraform Plan
+      - name: Terraform Destroy Plan
         working-directory: ${{ env.TF_WORKING_DIRECTORY }}
         run: |
-          terraform plan \
+          terraform plan -destroy \
             -var-file="${TF_VAR_FILE}" \
             -out=tfplan
 
-      - name: Upload Terraform Plan
+      - name: Upload Terraform Destroy Plan
         uses: actions/upload-artifact@v4
         with:
-          name: terraform-dev-plan
+          name: terraform-dev-destroy-plan
           path: ${{ env.TF_WORKING_DIRECTORY }}/tfplan
           retention-days: 7
 
-  apply:
-    name: Terraform Apply
+  destroy:
+    name: Terraform Destroy
     needs: plan
     runs-on: ubuntu-latest
 
@@ -123,12 +119,12 @@ jobs:
             -backend-config="tenant_id=${AZURE_TENANT_ID}" \
             -backend-config="subscription_id=${AZURE_SUBSCRIPTION_ID}"
 
-      - name: Download Terraform Plan
+      - name: Download Terraform Destroy Plan
         uses: actions/download-artifact@v5
         with:
-          name: terraform-dev-plan
+          name: terraform-dev-destroy-plan
           path: ${{ env.TF_WORKING_DIRECTORY }}
 
-      - name: Terraform Apply
+      - name: Terraform Apply Destroy Plan
         working-directory: ${{ env.TF_WORKING_DIRECTORY }}
         run: terraform apply -auto-approve tfplan
