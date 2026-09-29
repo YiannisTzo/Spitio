@@ -1,0 +1,16 @@
+[Bb]in/
+[Oo]bj/
+.vs/
+.idea/
+.vscode/
+TestResults/
+coverage/
+*.coverage
+.env
+.env.*
+!.env.example
+*.tfstate
+*.tfstate.*
+.terraform/
+secrets.json
+appsettings.Local.json
