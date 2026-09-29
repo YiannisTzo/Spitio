@@ -8,8 +8,8 @@ module "resource_group" {
 
   role_assignments = {
     current_user = {
-      role_definition_name = "Contributor"
-      principal_id         = data.azurerm_client_config.current.object_id
+      role_definition_name = "Owner"
+      principal_id         = "9aa93699-a50c-46b1-a85f-4f6c51cac385"
       principal_type       = "User"
     }
   }
